@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luo Mingzhi's Blog</title>
+</head>
+<body>
+<pre>
+为什么慢？github的CDN被某墙屏了。
+有vpn服务的可以直接使用vpn，没有vpn的，可以绕过dns解析，在本地直接绑定host。打开dns查询工具网站
+http://tool.chinaz.com/dns
+查询域名解析如下：
+选取一个TTL值最小的ip，直接绑定到hosts文件便可解决，比如我选取第一个ip，绑定域名如下
+103.245.222.133 assets-cdn.github.com
+多刷几下，访问速度就一切正常了
+域名映射：（主要是第一个）
+103.245.222.249 github.global.ssl.fastly.net
+103.245.222.133 assets-cdn.github.com
+</pre>
+</body>
+</html>
